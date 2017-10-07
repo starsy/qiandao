@@ -1,11 +1,11 @@
 # 基础镜像
-FROM python:2.7-alpine
+FROM i386/python:2.7-slim
 
 # 维护者信息
-MAINTAINER fangzhengjin <fangzhengjin@gmail.com>
+MAINTAINER starsy <starsy@gmail.com>
 
-RUN apk update
-RUN apk add bash autoconf g++
+RUN apt-get update
+RUN apt-get install -y bash autoconf g++
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
